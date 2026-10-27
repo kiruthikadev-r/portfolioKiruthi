@@ -14,4 +14,12 @@ export const achievements: Achievement[] = [
     description: "Specialization in the MERN stack (MongoDB, Express.js, React.js, Node.js).",
     issuer: "NxtWave",
   },
+  {
+    title: "Open-Source Contributor - freeCodeCamp",
+    date: "Dec 2025 - Oct 2026",
+    description:
+      "Three merged pull requests to freeCodeCamp's curriculum, including a new interactive JavaScript string-method workshop (reviewed and merged by the freeCodeCamp core team) and two curriculum accuracy fixes.",
+    issuer: "freeCodeCamp",
+    url: "https://github.com/freeCodeCamp/freeCodeCamp/commit/88fa28f5d5dee4998549fc4a3defae9f8cd174fa",
+  },
 ];

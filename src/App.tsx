@@ -5,6 +5,7 @@ import ShopSphereCaseStudy from "./pages/ShopSphereCaseStudy";
 import NizhalCaseStudy from "./pages/NizhalCaseStudy";
 import C2cCaseStudy from "./pages/C2cCaseStudy";
 import AnnexCaseStudy from "./pages/AnnexCaseStudy";
+import AdmCaseStudy from "./pages/AdmCaseStudy";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/projects/nizhal-case-study" element={<NizhalCaseStudy />} />
         <Route path="/projects/c2c-case-study" element={<C2cCaseStudy />} />
         <Route path="/projects/annex-case-study" element={<AnnexCaseStudy />} />
+        <Route path="/projects/adm-case-study" element={<AdmCaseStudy />} />
       </Routes>
     </div>
   );

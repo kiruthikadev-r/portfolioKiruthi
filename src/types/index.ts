@@ -50,6 +50,7 @@ export interface Achievement {
   date: string;
   description: string;
   issuer?: string;
+  url?: string; // link to real, verifiable evidence (a merged PR, a certificate, etc.)
 }
 
 export interface PhilosophyPrinciple {

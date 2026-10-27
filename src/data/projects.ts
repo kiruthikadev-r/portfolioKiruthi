@@ -153,4 +153,34 @@ export const projects: Project[] = [
       "Verified directly from the project's public source (annex-global-fe) and git history - only the frontend repo was available, and 'my role' reflects exactly what git blame attributes to me on a four-person team.",
     caseStudyPath: "/projects/annex-case-study",
   },
+  {
+    id: "adm-retail",
+    number: "06",
+    title: "ALTIUSNXT Data Mapping (ADM)",
+    category: "Frontend · AI Data Mapping Platform",
+    summary:
+      "An AI-assisted product data platform at Antlab: import a catalog from any source, map it to one schema, then enrich, brand-check, and benchmark the content.",
+    overview:
+      "An internal Antlab product for retail clients: import product catalogs from a file or six connected platforms (Shopify, Wix, Squarespace, WooCommerce, Salsify, Akeneo), map their headers onto one product schema, then run AI-assisted content enrichment, brand-tone/restricted-word checks, and benchmarking/audit before content is marked complete. Built and then substantially rewritten solo - the reviewed branch is a 107-file rewrite over the prior version, and every commit in the repository's history is mine.",
+    features: [
+      "Catalog import from a file or six external commerce/PIM platforms, with duplicate-catalog-name checking",
+      "Click-to-pair header-to-schema mapping screen, resolving uploaded columns against a fixed product schema",
+      "Rule-based AI content enrichment/creation with savable, reusable generation rulesets",
+      "Brand DNA: content rules, brand-tone detection (manual, from sample text, or from an uploaded sample), and restricted-word enforcement",
+      "Benchmarking against a reference product and bulk/catalog-level audit, gated behind an approval step",
+    ],
+    technologies: ["React", "React Router", "MUI", "PrimeReact", "React Hook Form", "Axios"],
+    contributions: [
+      "Sole frontend developer across the repository's full git history - built catalog import/mapping, AI enrichment, Brand DNA, and benchmarking/audit",
+      "Added a saved-ruleset path to the enrichment flow so a working AI-generation configuration could be reused instead of re-entered per catalog",
+      "Grew and maintained the central API-call layer (~130 exported calls) as the feature set expanded",
+    ],
+    links: {
+      live: { label: "Live Site", url: null },
+      source: { label: "Source Code", url: null },
+    },
+    caseStudy:
+      "Confidential company project - per the owner's own instruction, no repository link is shown anywhere in this portfolio. Verified directly from a full read of the source and its git history; only the frontend repo was available to review.",
+    caseStudyPath: "/projects/adm-case-study",
+  },
 ];

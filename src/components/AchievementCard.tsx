@@ -1,4 +1,4 @@
-import { Trophy, Award } from "lucide-react";
+import { Trophy, Award, ArrowUpRight } from "lucide-react";
 import type { Achievement } from "../types";
 
 export default function AchievementCard({ achievement, featured = false }: { achievement: Achievement; featured?: boolean }) {
@@ -39,6 +39,17 @@ export default function AchievementCard({ achievement, featured = false }: { ach
           </>
         )}
       </div>
+
+      {achievement.url && (
+        <a
+          href={achievement.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-lime-400 hover:underline"
+        >
+          View Contribution <ArrowUpRight size={14} />
+        </a>
+      )}
     </div>
   );
 }

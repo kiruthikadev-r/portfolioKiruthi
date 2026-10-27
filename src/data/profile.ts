@@ -7,9 +7,8 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/kiruthika-r-903525246/",
   github: "https://github.com/kiruthikadev-r",
   githubUsername: "kiruthikadev-r",
-  // Set this once the real PDF is placed at public/resume/Kiruthika-R-Resume.pdf
   resumePath: "/resume/Kiruthika-R-Resume.pdf",
-  resumeAvailable: false,
+  resumeAvailable: true,
   heroStatus: "SOFTWARE ENGINEER · FULL-STACK DEVELOPER",
   heroHeadline: "BUILDING DIGITAL PRODUCTS. SOLVING REAL PROBLEMS.",
   heroSupport:
