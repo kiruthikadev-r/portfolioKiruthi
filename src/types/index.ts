@@ -25,9 +25,6 @@ export interface Project {
   caseStudy?: string; // extended write-up shown in the detail panel, optional
   placeholderNote?: string; // shown when details are intentionally incomplete
   caseStudyPath?: string; // if set, "Read Case Study" links to this route instead of the inline panel
-  icon?: "landmark" | "graduationCap" | "car" | "newspaper" | "messageCircle"; // shown on the card when there's no real screenshot - an honest icon tile, never a fake UI mockup
-  visualCaption?: string; // short, honest reason there's no screenshot (e.g. "Confidential client project"), shown under the icon
-  screenshot?: string; // real screenshot (imported asset path) - overrides the icon tile on the card when set
 }
 
 export interface ExperienceEntry {

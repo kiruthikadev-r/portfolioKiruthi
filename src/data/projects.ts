@@ -1,5 +1,4 @@
 import type { Project } from "../types";
-import shopSphereScreenshot from "../assets/shopsphere/shop-catalog.png";
 
 // Edit freely. Set a link's `url` to null to render it as a clearly-marked
 // "not public yet" state instead of a dead link. Never invent a URL here.
@@ -7,28 +6,37 @@ export const projects: Project[] = [
   {
     id: "nizhal-tnpsc",
     number: "01",
-    icon: "graduationCap",
-    visualCaption: "Live site is public - source isn't, so no real in-app screenshot here",
     title: "Nizhal TNPSC",
-    category: "Web Application",
-    summary: "A TNPSC exam-preparation focused website.",
+    category: "Full-Stack · Exam-Prep Platform",
+    summary:
+      "A live TNPSC exam-prep platform: timed mock tests, bilingual Tamil/English PDF results, and a real PhonePe-backed subscription model.",
     overview:
-      "A website built around TNPSC exam preparation. This entry is a placeholder for a fuller write-up - the specific features I personally built versus the site's current full feature set haven't been itemized yet.",
-    features: [],
-    technologies: [],
-    contributions: [],
+      "A production exam-preparation platform for the TNPSC (Tamil Nadu Public Service Commission) exams, built at DreamWebInfo. Covers per-subject MCQ practice, full timed mock tests, a weighted aptitude series, a combined weekly test, and bilingual PDF result exports, gated behind a free/basic/premium subscription enforced server-side. Started solo (first commits on both repos) and built out collaboratively with one other developer.",
+    features: [
+      "Timed mock tests with per-question scoring and an exit-confirmation guard against losing progress",
+      "Bilingual Tamil/English PDF result export, built independently server-side (PDFKit) and client-side (jsPDF)",
+      "Aptitude Series: topic-weighted random question selection across English- and Tamil-medium banks",
+      "Weekly Test: a combined paper assembled from three separately-sampled question pools, gated to paid plans",
+      "Free / Basic (₹99) / Premium (₹199) subscriptions via PhonePe, with server-verified payment status before any plan upgrade",
+    ],
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Google OAuth", "PhonePe"],
+    contributions: [
+      "Started both repositories; built the Google OAuth login flow (Passport + Google ID-token verification)",
+      "Built the Aptitude Series and Weekly Test features end-to-end, backend and frontend",
+      "Built the bilingual Tamil/English PDF result export, independently on both the server and client",
+      "Built the PhonePe payment integration: checksum-signed requests and server-side status polling",
+    ],
     links: {
-      live: { label: "Visit Site", url: "https://nizhaltnpsc.com" },
-      source: { label: "Source Code", url: null },
+      live: { label: "Visit Site", url: null },
+      source: { label: "Source Code", url: "https://github.com/DreamWebInfo79/tnpscFrontend" },
     },
-    placeholderNote:
-      "Overview, feature list, technologies, and specific contributions are placeholders - fill in from the real build before publishing.",
+    caseStudy:
+      "Verified directly from the project's public source (tnpscBackend, tnpscFrontend) and git history, not recalled from memory - 'my role' reflects what commit authorship actually shows.",
+    caseStudyPath: "/projects/nizhal-case-study",
   },
   {
     id: "svcf-chit-fund",
     number: "02",
-    icon: "landmark",
-    visualCaption: "Confidential client project - screenshots of the real app aren't publishable",
     title: "SVCF / Chit Fund Accounting System",
     category: "Full-Stack · Fintech Platform Rewrite",
     summary:
@@ -60,7 +68,6 @@ export const projects: Project[] = [
   {
     id: "ecommerce-app",
     number: "03",
-    screenshot: shopSphereScreenshot,
     title: "ShopSphere - E-commerce Platform",
     category: "Full-Stack Web Development",
     summary:
@@ -90,58 +97,60 @@ export const projects: Project[] = [
   {
     id: "used-car-platform",
     number: "04",
-    icon: "car",
-    visualCaption: "Source and live demo not available - screenshot pending",
-    title: "Used Car Selling Platform",
-    category: "React Web Application",
-    summary: "A consumer-to-consumer used-car listing site with a carousel-based browsing interface.",
+    title: "Cars2Customer - Used Car Marketplace",
+    category: "Full-Stack · React Native Marketplace App",
+    summary:
+      "A used-car marketplace app for cars2customer.com: browse and favorite listings, send a buyer inquiry, backed by an admin-managed listings API.",
     overview:
-      "A used-car selling website built with React, with a carousel-based interface for browsing listings. Further detail on search functionality and the full feature set is a placeholder pending real screenshots and a feature audit.",
-    features: ["Carousel-based listing browser"],
-    technologies: ["React"],
-    contributions: [],
+      "A React Native marketplace app built at DreamWebInfo for cars2customer.com, backed by an Express/MongoDB API that handles admin-managed car listings, OTP-verified account signup, Google Sign-In, favorites, and buyer-inquiry bookings. Started solo (first commits on both the app and backend repos are mine) and built out alongside one other developer, with a later solo pass adding the search UI.",
+    features: [
+      "Browse and filter listings by brand and budget, with a live-fetched car list shared via React Context",
+      "Full car detail view (price, km driven, fuel/transmission, condition, features) with a buyer-inquiry form",
+      "Favorites, synced to the signed-in user's account",
+      "Admin-managed listings: create/edit/delete, with a separate 'top admin' tier in the schema",
+      "Email/password signup gated by a real OTP step, plus Google Sign-In with separate web and Android client IDs",
+    ],
+    technologies: ["React Native", "Node.js", "Express.js", "MongoDB", "Google OAuth"],
+    contributions: [
+      "Started both repositories; built the email+OTP signup flow and the Google Sign-In integration (web and Android)",
+      "Built the admin registration/editing flow for listing management",
+      "Returned for a later pass implementing the search UI and a UI/technical-alignment cleanup",
+    ],
     links: {
       live: { label: "Live Site", url: null },
-      source: { label: "Source Code", url: null },
+      source: { label: "Source Code", url: "https://github.com/DreamWebInfo79/c2cApp" },
     },
-    placeholderNote: "Add real screenshots, confirmed features, and project links before publishing.",
+    caseStudy:
+      "Verified directly from the project's public source (c2cApp, c2c-backend) and git history - a third repo (client-c2c) wasn't accessible to verify.",
+    caseStudyPath: "/projects/c2c-case-study",
   },
   {
-    id: "blog-app",
+    id: "annex-global",
     number: "05",
-    icon: "newspaper",
-    visualCaption: "Source and live demo not available - screenshot pending",
-    title: "Blog Application",
-    category: "Backend Development",
-    summary: "A blog platform backend built with Node.js and SQLite.",
+    title: "Annex Global Conferences",
+    category: "Frontend · Multi-Conference Platform",
+    summary:
+      "A multi-tenant conference platform: a public microsite per conference plus a shared CMS admin dashboard, built by a four-person team.",
     overview:
-      "A backend-focused blog application project using Node.js and SQLite. API structure, routes, and the exact feature set are placeholders pending a pass through the real codebase.",
-    features: [],
-    technologies: ["Node.js", "SQLite"],
-    contributions: [],
+      "A platform for running academic/research conferences at DreamWebInfo - every conference gets its own public microsite (speakers, venue, topics, registration, past-conference archive) from a single dynamic route, plus a shared admin dashboard for managing content, speakers, sponsors, and payments across every conference. A four-person team effort (577 commits); I was the second-most active contributor, focused on the public-facing conference pages.",
+    features: [
+      "Per-conference public microsite generated from one dynamic route: speakers, venue, topics, program, registration, FAQ, abstract submission",
+      "A dated past-conference archive per conference: attendees, report, gallery, proceedings, program, testimonials",
+      "Shared admin CMS dashboard across every conference, role-gated so a restricted admin role can't reach certain pages",
+      "HDFC payment gateway integration for registration, with dedicated success/failure pages and an admin order-status lookup",
+    ],
+    technologies: ["Next.js", "React", "Redux Toolkit", "TanStack Query", "PrimeReact"],
+    contributions: [
+      "Built the Registration form header, Alumni Speakers, and the conference About/Details and Organizing Committee sections",
+      "Built Venue Location, Connect With Others, and the topic-centric Topics view",
+      "Rewired the home banner and image sliders to read from the admin-managed data source instead of static markup",
+    ],
     links: {
       live: { label: "Live Site", url: null },
-      source: { label: "Source Code", url: null },
+      source: { label: "Source Code", url: "https://github.com/DreamWebInfo79/annex-global-fe" },
     },
-    placeholderNote: "Fill in real API/database details and screenshots before publishing.",
-  },
-  {
-    id: "chat-app",
-    number: "06",
-    icon: "messageCircle",
-    visualCaption: "Source and live demo not available - screenshot pending",
-    title: "Chat Application",
-    category: "Application Development",
-    summary: "A messaging application built as a Computer Science project.",
-    overview:
-      "A messaging-oriented application developed during coursework. Implementation details (real-time transport, database, auth) are placeholders pending confirmation against the real project.",
-    features: [],
-    technologies: [],
-    contributions: [],
-    links: {
-      live: { label: "Live Site", url: null },
-      source: { label: "Source Code", url: null },
-    },
-    placeholderNote: "Fill in the real communication stack, database, and screenshots before publishing.",
+    caseStudy:
+      "Verified directly from the project's public source (annex-global-fe) and git history - only the frontend repo was available, and 'my role' reflects exactly what git blame attributes to me on a four-person team.",
+    caseStudyPath: "/projects/annex-case-study",
   },
 ];
